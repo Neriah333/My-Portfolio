@@ -1,22 +1,26 @@
 import React from "react";
-import Side from "./components/Side";
+// import Side from "./components/Side";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Education from "./pages/Education";
 import Contact from "./pages/Contact";
+import About from "./pages/About"
 
 export default function App() {
   return (
     <div className="flex">
       {/* Sidebar fixed */}
-      <Side />
+      {/* <Side /> */}
 
       {/* Scrollable main content */}
-      <main className="ml-60 flex-1 p-8 space-y-20">
+      <main className="ml-20 mr-20 flex-1 p-2 space-y-10">
         <section id="home">
           <Home />
         </section>
+        <section id="about">
+          <About />
+          </section>
         <section id="projects">
           <Projects />
         </section>

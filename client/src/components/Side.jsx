@@ -10,11 +10,12 @@ import {
 } from "@/components/ui/sidebar";
 import { Link } from "react-router-dom";
 
-export default function Sidemenu() {
+export default function Layout() {
   const [activeSection, setActiveSection] = useState("Home");
 
   const menuItems = [
     { name: "Home", to: "#home" },
+    { name: "About", to: "#about" },
     { name: "Projects", to: "#projects" },
     { name: "Skills", to: "#skills" },
     { name: "Education", to: "#education" },

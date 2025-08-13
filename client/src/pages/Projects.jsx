@@ -19,7 +19,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-12 px-6 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="py-12 px-6 bg-gray-200 dark:bg-gray-900">
       <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-gray-100">
         Projects
       </h2>
@@ -30,7 +30,7 @@ export default function Projects() {
             className="bg-white dark:bg-gray-800 shadow-md rounded-xl p-5 flex flex-col justify-between"
           >
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+              <h3 className="text-lg font-semibold text-blue-400">
                 {project.title}
               </h3>
               <p className="mt-2 text-gray-600 dark:text-gray-300">

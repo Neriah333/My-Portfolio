@@ -1,6 +1,6 @@
 import React from "react";
 import { FaReact, FaNodeJs, FaGitAlt, FaDatabase, FaCss3Alt, FaHtml5 } from "react-icons/fa";
-import { SiTailwindcss, SiJavascript, SiExpress, SiMongodb, SiPostman, SiVite } from "react-icons/si";
+import { SiTailwindcss, SiJavascript, SiExpress, SiMongodb, SiPostman, SiVite, SiMysql } from "react-icons/si";
 
 export default function Skills() {
   const skills = [
@@ -20,6 +20,7 @@ export default function Skills() {
         { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
         { name: "Express", icon: <SiExpress className="text-gray-500" /> },
         { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
+        { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
         { name: "Database Management", icon: <FaDatabase className="text-purple-500" /> },
       ],
     },

@@ -4,12 +4,15 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-gray-50 dark:bg-gray-900"
+      className="min-h-100 flex flex-col justify-center px-6 bg-gray-200 dark:bg-gray-900 bg-[url('/images/image3.jpg')] bg-cover bg-center bg-no-repeat"
     >
+      
+      
       <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
-        Hello, I’m <span className="text-blue-500">Pheobe Nyawanda</span>
+        Hello,
       </h1>
-      <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-2xl">
+      <h1 className="text-4xl font-bold ">I’m Pheobe Nyawanda</h1>
+      <p className="  max-w-2xl">
         I’m a passionate software developer specializing in building web applications
         using modern technologies like React, Node.js, and the MERN Stack.
       </p>
