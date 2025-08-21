@@ -73,7 +73,7 @@ export default function Layout() {
                       asChild
                       className={
                         activeSection.toLowerCase() === item.name.toLowerCase()
-                          ? "bg-blue-500 text-white"
+                          ? "bg-blue-400 text-white"
                           : ""
                       }
                     >
@@ -99,7 +99,7 @@ export default function Layout() {
               href="https://www.linkedin.com/in/pheobenyawanda59263630a"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 text-2xl"
+              className="text-blue-600 hover:text-blue-100 text-2xl"
             >
               <FaLinkedin />
             </a>

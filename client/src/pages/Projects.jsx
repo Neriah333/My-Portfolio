@@ -7,19 +7,19 @@ export default function Projects() {
       description:
         "A desktop application to manage fish inventory, sales, and transactions for lakeside cooperatives. Built with Express, React, and MongoDB.",
       tech: ["React", "Node.js", "MongoDB", "Express"],
-      link: "#",
+      link: "https://fishmarke.netlify.app", // ✅ only this one has a real link
     },
     {
       title: "Portfolio Website",
       description:
         "A personal portfolio showcasing my projects, education, and skills. Designed with React and Tailwind CSS for a modern, responsive feel.",
       tech: ["React", "TailwindCSS"],
-      link: "#",
+      link: null, // ❌ no link
     },
   ];
 
   return (
-    <section id="projects" className="py-12 px-6 bg-gray-200 dark:bg-gray-900">
+    <section id="projects" className="py-12 px-6 bg-gray-300 dark:bg-gray-900">
       <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-gray-100">
         Projects
       </h2>
@@ -47,14 +47,18 @@ export default function Projects() {
                 ))}
               </div>
             </div>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-block text-blue-500 hover:underline"
-            >
-              View Project →
-            </a>
+
+            {/* ✅ only render link if project.link exists */}
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-block text-blue-500 hover:underline"
+              >
+                View Project →
+              </a>
+            )}
           </div>
         ))}
       </div>

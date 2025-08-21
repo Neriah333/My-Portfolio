@@ -1,6 +1,22 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaGitAlt, FaDatabase, FaCss3Alt, FaHtml5 } from "react-icons/fa";
-import { SiTailwindcss, SiJavascript, SiExpress, SiMongodb, SiPostman, SiVite, SiMysql } from "react-icons/si";
+import { motion } from "framer-motion";
+import {
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaDatabase,
+  FaCss3Alt,
+  FaHtml5,
+} from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiJavascript,
+  SiExpress,
+  SiMongodb,
+  SiPostman,
+  SiVite,
+  SiMysql,
+} from "react-icons/si";
 
 export default function Skills() {
   const skills = [
@@ -43,9 +59,13 @@ export default function Skills() {
       </h2>
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {skills.map((skillGroup, index) => (
-          <div
+          <motion.div
             key={index}
             className="bg-gray-50 dark:bg-gray-800 shadow-md rounded-xl p-6"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.3 }}
+            viewport={{ once: false }}
           >
             <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4">
               {skillGroup.category}
@@ -61,7 +81,7 @@ export default function Skills() {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
