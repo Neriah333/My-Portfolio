@@ -9,7 +9,7 @@ import {
   SidebarMenuButton,
   SidebarProvider,
 } from "@/components/ui/sidebar";
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp, FaTwitter } from "react-icons/fa";
 
 export default function Layout() {
   const [activeSection, setActiveSection] = useState("Home");
@@ -20,6 +20,7 @@ export default function Layout() {
     { name: "PROJECTS", to: "#projects" },
     { name: "SKILLS", to: "#skills" },
     { name: "EDUCATION", to: "#education" },
+    { name: "EXPERIENCE", to: "#experience" },
     { name: "CONTACT", to: "#contact" },
   ];
 
@@ -56,7 +57,7 @@ export default function Layout() {
               <img
                 src="/images/myimage.jpg"
                 alt="Pheobe Nyawanda"
-                className="w-24 h-24 rounded-full mx-auto mt-20 mb-4 object-cover"
+                className="w-30 h-30 rounded-full mx-auto mt-20 mb-4 object-cover"
               />
               <SidebarGroupLabel className="text-3xl font-bold">
                 Pheobe Nyawanda
