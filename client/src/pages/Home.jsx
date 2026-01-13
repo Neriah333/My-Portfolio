@@ -1,4 +1,5 @@
 import React from "react";
+import bgImage from "../../images/bg5.jpg";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -9,13 +10,13 @@ export default function Home() {
                  bg-white overflow-hidden"
     >
       {/* Background Pattern - Subtle light grey tech grid or dots */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/graphy.png')]" />
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url(${bgImage})]" />
 
       {/* Decorative Large Background Image (Right side like your reference) */}
       <div 
         className="absolute right-0 top-0 w-1/2 h-80 hidden lg:block bg-cover bg-center"
         style={{ 
-          backgroundImage: "url('/images/bg5.jpg')",
+          backgroundImage: `url(${bgImage})`,
           clipPath: 'polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)' 
         }}
       />

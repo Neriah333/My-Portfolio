@@ -10,6 +10,7 @@ import {
   SidebarProvider,
 } from "@/components/ui/sidebar";
 import { FaGithub, FaLinkedin, FaWhatsapp, FaTwitter } from "react-icons/fa";
+import Image from "../../images/myimage.jpg"
 
 export default function Layout() {
   const [activeSection, setActiveSection] = useState("Home");
@@ -55,7 +56,7 @@ export default function Layout() {
           <SidebarContent>
             <SidebarGroup className="items-center text-center">
               <img
-                src="/images/myimage.jpg"
+                src={Image}
                 alt="Pheobe Nyawanda"
                 className="w-30 h-30 rounded-full mx-auto mt-20 mb-4 object-cover"
               />

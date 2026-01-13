@@ -1,4 +1,5 @@
 import React from 'react';
+import bgImage from '../../images/bg3.jpg';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 
@@ -21,7 +22,7 @@ const Stats = () => {
       ref={ref} // Attach the observer here
       className="relative w-full mb-20 py-24 px-6 md:px-12 bg-fixed bg-center bg-cover"
       style={{
-        backgroundImage: `url('/images/bg3.jpg')`,
+        backgroundImage: `url(${bgImage})`,
       }}
     >
       {/* Dark Teal Overlay */}
