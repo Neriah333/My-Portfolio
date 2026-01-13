@@ -5,7 +5,10 @@ import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Education from "./pages/Education";
 import Contact from "./pages/Contact";
-import About from "./pages/About"
+import About from "./pages/About";
+import Stats from "./pages/Stats";
+import Services from "./pages/Servicecards";
+import Experience from "./pages/Experience";
 
 export default function App() {
   return (
@@ -20,7 +23,13 @@ export default function App() {
         </section>
         <section id="about">
           <About />
-          </section>
+        </section>
+        <section id="services">
+          <Services />
+        </section>
+        <section id="stats">
+          <Stats />
+        </section>
         <section id="projects">
           <Projects />
         </section>
@@ -30,7 +39,10 @@ export default function App() {
         <section id="education">
           <Education />
         </section>
-        <section id="Contact">
+        <section id="experience">
+          <Experience />
+        </section>
+        <section id="contact">
           <Contact />
         </section>
       </main>

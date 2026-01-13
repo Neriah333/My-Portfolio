@@ -16,6 +16,8 @@ import {
   SiPostman,
   SiVite,
   SiMysql,
+  SiTypescript,
+  SiFigma,
 } from "react-icons/si";
 
 export default function Skills() {
@@ -24,6 +26,7 @@ export default function Skills() {
       category: "Frontend",
       items: [
         { name: "React", icon: <FaReact className="text-blue-500" /> },
+        { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> },
         { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
         { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
@@ -45,6 +48,7 @@ export default function Skills() {
       items: [
         { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
         { name: "GitHub", icon: <FaGitAlt className="text-gray-800 dark:text-gray-200" /> },
+        { name: "Figma", icon: <SiFigma className="text-pink-500" /> },
         { name: "Postman", icon: <SiPostman className="text-orange-400" /> },
         { name: "Vite", icon: <SiVite className="text-purple-400" /> },
         { name: "JWT Authentication", icon: <SiJavascript className="text-yellow-500" /> },
@@ -57,16 +61,22 @@ export default function Skills() {
       <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-gray-100">
         Skills
       </h2>
+      <p className="mt-10 mb-10 text-xl text-gray-500 text-center">
+        Over two years of hands-on experience working with:
+      </p>
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {skills.map((skillGroup, index) => (
           <motion.div
             key={index}
-            className="bg-gray-50 dark:bg-gray-800 shadow-md rounded-xl p-6"
+            className="bg-gray-50 dark:bg-gray-800 shadow-md rounded-xl p-6 
+                      transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.6, delay: index * 0.3 }}
             viewport={{ once: false }}
           >
+
             <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4">
               {skillGroup.category}
             </h3>

@@ -42,22 +42,22 @@ export default function Contact() {
       
       {/* LEFT SIDE - CONTACT INFO */}
       <div className="flex-1 space-y-4">
-        <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
+        <h2 className="text-2xl font-bold text-slate-800 dark:text-white">
           Get in Touch
         </h2>
         <p className="text-gray-600 dark:text-gray-300">
           Feel free to reach out through the form or via my contact details below.
         </p>
         <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-          <FaPhoneAlt className="text-blue-500" />
+          <FaPhoneAlt className="text-blue-400" />
           <span>+254 794 040 980</span>
         </div>
         <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-          <FaEnvelope className="text-blue-500" />
+          <FaEnvelope className="text-blue-400" />
           <span>pheobenyawanda@gmail.com</span>
         </div>
         <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-          <FaMapMarkerAlt className="text-blue-500" />
+          <FaMapMarkerAlt className="text-blue-400" />
           <span>Nairobi, Kenya</span>
         </div>
       </div>
@@ -68,7 +68,7 @@ export default function Contact() {
           <form onSubmit={handleSubmit}>
             <CardContent className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700">Name</label>
+                <label className="block text-sm font-medium text-slate-700">Name</label>
                 <Input
                   name="name"
                   value={form.name}
@@ -79,7 +79,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700">Email</label>
+                <label className="block text-sm font-medium text-slate-700">Email</label>
                 <Input
                   name="email"
                   type="email"
@@ -91,7 +91,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700">Subject</label>
+                <label className="block text-sm font-medium text-slate-700">Subject</label>
                 <Input
                   name="subject"
                   value={form.subject}
@@ -116,7 +116,7 @@ export default function Contact() {
             </CardContent>
 
             <CardFooter>
-              <Button type="submit" className="w-full">Send</Button>
+              <Button type="submit" className="w-full bg-slate-900 mt-5 text-white hover:bg-blue-400">Send</Button>
             </CardFooter>
           </form>
         </Card>
