@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 
 export default function About() {
   return (
@@ -19,8 +21,20 @@ export default function About() {
           Beyond coding, I value continuous learning, collaboration, and applying technology to solve real-world problems.
            I love experimenting with new platforms and tools. 
         </p>
-        <p className="mt-4 text-gray-700 dark:text-gray-300 text-lg font-light leading-relaxed">
-          #Learning is a continuous journey and technology is the perfect playground.</p>
+        <motion.p
+          initial={{ x: -80 }}
+          animate={{ x: 80 }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "linear",
+          }}
+          className="mt-4 text-gray-700 dark:text-gray-300 text-lg font-light leading-relaxed"
+        >
+          #Learning is a continuous journey and technology is the perfect playground.
+        </motion.p>
+
       </div>
     </section>
   );
