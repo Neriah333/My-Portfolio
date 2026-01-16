@@ -38,7 +38,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 p-6">
+    <div className="flex flex-col md:flex-row gap-8 p-6 mt-15">
       
       {/* LEFT SIDE - CONTACT INFO */}
       <div className="flex-1 space-y-4">

@@ -49,7 +49,14 @@ export default function Home() {
           className="mt-10"
         >
           <button className="px-10 py-4 border-2 border-slate-900 text-slate-900 text-xs font-bold uppercase tracking-[0.3em] hover:bg-slate-900 hover:text-white transition-all duration-300">
-           <a href="#projects">View CV</a>
+           <a
+            href="/public/PHEOBE NYAWANDA - RESUME'.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View My CV
+          </a>
+
           </button>
         </motion.div>
       </div>

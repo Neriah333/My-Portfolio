@@ -12,7 +12,7 @@ const Experience = () => {
         "Developing responsive dashboards using React.js and Tailwind CSS for real-time threat monitoring.",
         "Collaborating with backend engineers to integrate RESTful APIs and WebSocket connections for live data streaming.",
         "Optimizing application performance, reducing initial load times by 40% through code-splitting and lazy loading.",
-        "Implementing rigorous UI/UX standards to ensure accessibility (WCAG) across all security tools."
+        "Translating UI/UX designs on figma into high-quality code.",
       ],
       results: [
         "Successfully launched a centralize analytics portal used by 50+ enterprise clients.",
@@ -23,10 +23,10 @@ const Experience = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-gray-50 text-gray-300 font-sans" id="experience">
+    <section className="mt-8 py-20 px-6 bg-gray-50 text-gray-300 font-sans" id="experience">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 flex items-center gap-4">
-          <Briefcase className="text-blue-400" size={32} />
+          
           Work Experience
         </h2>
 
@@ -68,7 +68,7 @@ const Experience = () => {
                 </div>
 
                 {/* Results / Achievement Card */}
-                <div className="bg-slate-800 p-6 rounded-xl border border-blue-400/20 animate-float shadow-[0_20px_40px_-15px_rgba(96,165,250,0.3)]">
+                {/* <div className="bg-slate-800 p-6 rounded-xl border border-blue-400/20 animate-float shadow-[0_20px_40px_-15px_rgba(96,165,250,0.3)]">
                   <h4 className="text-blue-400 font-semibold mb-4 flex items-center gap-2">
                     <CheckCircle2 size={18} />
                     Achievement
@@ -80,7 +80,30 @@ const Experience = () => {
                       </li>
                     ))}
                   </ul>
+                </div> */}
+
+                <div className="md:col-span-2 mt-6">
+                {/* Heading + Status */}
+                <div className="flex items-center gap-85 mb-3">
+                  <h3 className="text-xl font-semibold text-blue-400">
+                    Demo
+                  </h3> <br />
+
+                  <span className="text-xs px-4 py-2 rounded-full bg-slate-900 text-slate-400 ">
+                    In Progress
+                  </span>
                 </div>
+
+                {/* Video */}
+                <video
+                  className="w-full rounded-xl border border-slate-700 shadow-lg"
+                  controls
+                >
+                  <source src="/demo.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+
               </div>
             </div>
           ))}

@@ -27,7 +27,7 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="py-12 px-6 bg-white dark:bg-slate-900"
+      className="mt-8 py-12 px-6 bg-white dark:bg-slate-900"
     >
       <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-gray-100">
         Education and Certifications
