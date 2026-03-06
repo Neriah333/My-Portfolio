@@ -48,16 +48,16 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-10"
         >
-          <button className="px-10 py-4 border-2 border-slate-900 text-slate-900 text-xs font-bold uppercase tracking-[0.3em] hover:bg-slate-900 hover:text-white transition-all duration-300">
-           <a
-            href="/public/PHEOBE NYAWANDA - RESUME'.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View My CV
-          </a>
-
-          </button>
+          
+        <a
+          href="https://1drv.ms/b/c/a157ce8fb268e1aa/IQBKO-x-HHxaRJ8GUOYALgwnAU5uuR8Q56M8MAZYhsJQ800?e=5ub2Pb"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-10 py-4 border-2 border-slate-900 text-slate-900 text-xs font-bold uppercase tracking-[0.3em] hover:bg-slate-900 hover:text-white transition-all duration-300 inline-block"
+        >
+          View My CV
+        </a>
+          
         </motion.div>
       </div>
 
