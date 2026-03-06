@@ -50,7 +50,7 @@ export default function Home() {
         >
           
         <a
-          href="https://1drv.ms/b/c/a157ce8fb268e1aa/IQBKO-x-HHxaRJ8GUOYALgwnAU5uuR8Q56M8MAZYhsJQ800?e=5ub2Pb"
+          href="https://1drv.ms/b/c/a157ce8fb268e1aa/IQBKO-x-HHxaRJ8GUOYALgwnAQriISfwNymA625ydLWe9Vo?e=XNhpEC"
           target="_blank"
           rel="noopener noreferrer"
           className="px-10 py-4 border-2 border-slate-900 text-slate-900 text-xs font-bold uppercase tracking-[0.3em] hover:bg-slate-900 hover:text-white transition-all duration-300 inline-block"

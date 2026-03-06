@@ -30,9 +30,10 @@ export default function About() {
         {/* Description Body */}
         <div className="space-y-4 text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-2xl">
           <p>
-            I enjoy turning <span className="text-blue-400 dark:text-white font-semibold">complex problems</span> into simple, efficient, and scalable solutions. 
-            I bridge the gap between robust backend logic and intuitive frontend experiences.
-          </p>
+            Full Stack Developer and AWS Cloud Practitioner with 2+ years’ experience in responsive web development, cloud technologies, and full-stack applications. 
+            Skilled in building scalable, user-focused solutions using modern JavaScript frameworks. Experienced in collaborating in cross functional teams and continuously learning 
+            new technologies to solve real-world problems. 
+          </p>    
           <p>
             Beyond coding, I value continuous learning and collaboration. I believe that 
             technology is most powerful when it’s used to solve <span className="text-blue-400 dark:text-white font-semibold">real-world problems</span>.

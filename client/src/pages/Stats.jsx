@@ -6,9 +6,9 @@ import { useInView } from 'react-intersection-observer';
 const Stats = () => {
   const statsData = [
     { number: 150, label: "CUPS OF COFFEE" },
-    { number: 50, label: "PROJECTS" },
-    { number: 20, label: "CLIENTS" },
-    { number: 5, label: "PARTNERS" },
+    { number: 10, label: "PROJECTS" },
+    { number: 2, label: "CLIENTS" },
+    { number: 2, label: "PARTNERS" },
   ];
 
   // This hook detects when the section enters the viewport
