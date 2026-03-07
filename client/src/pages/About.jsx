@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react"; // Ensure these are imported
+import myImage from "../../images/myImage.png";
 
 export default function About() {
-  const image = "/images/myImage.png";
+  
 
   return (
     <section id="about" className="relative min-h-[70vh] flex items-center bg-slate-950 px-8 py-32 overflow-hidden">
@@ -30,8 +31,9 @@ export default function About() {
             className="w-80 h-80 bg-slate-900 border-4 border-slate-800 shadow-2xl relative overflow-hidden rounded-[30px]"
           >
             <img 
-              src={image} 
+              src={myImage} 
               alt="Pheobe Nyawanda" 
+              loading="lazy"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" 
             />
           </motion.div>
