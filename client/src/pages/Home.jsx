@@ -6,65 +6,61 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center px-12 md:px-20 
-                 bg-white overflow-hidden"
+      /* Reduced height: Adjusted from min-h-screen to h-[70vh] or min-h-[600px] */
+      className="relative h-[75vh] min-h-[550px] flex items-center justify-center bg-slate-950 overflow-hidden"
     >
-      {/* Background Pattern - Subtle light grey tech grid or dots */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url(${bgImage})]" />
-
-      {/* Decorative Large Background Image (Right side like your reference) */}
+      {/* Background Image with darker, tighter overlay */}
       <div 
-        className="absolute right-0 top-0 w-1/2 h-80 hidden lg:block bg-cover bg-center"
-        style={{ 
-          backgroundImage: `url(${bgImage})`,
-          clipPath: 'polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)' 
-        }}
-      />
-
-      {/* Content Container */}
-      <div className="relative z-10 max-w-2xl">
-        <motion.h1
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-3xl md:text-8xl font-serif font-bold text-slate-900 leading-tight"
-        >
-          Welcome to <br />
-          <span className="text-slate-800">My Tech Hub.</span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-6 text-lg md:text-xl text-slate-600 font-light max-w-md leading-relaxed"
-        >
-          I find joy in turning imaginations into reality using codes and designs!
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-10"
-        >
-          
-        <a
-          href="https://1drv.ms/b/c/a157ce8fb268e1aa/IQBKO-x-HHxaRJ8GUOYALgwnAQriISfwNymA625ydLWe9Vo?e=XNhpEC"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-10 py-4 border-2 border-slate-900 text-slate-900 text-xs font-bold uppercase tracking-[0.3em] hover:bg-slate-900 hover:text-white transition-all duration-300 inline-block"
-        >
-          View My CV
-        </a>
-          
-        </motion.div>
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
+        <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-[2px]" />
       </div>
 
-      {/* Optional: Scroll Down Indicator */}
-      <div className="absolute bottom-10 left-12 animate-bounce hidden md:block">
-        <div className="w-[1px] h-12 bg-slate-300 mx-auto"></div>
+      {/* Main Content Card - Scaled down padding */}
+      <div className="relative z-10 w-full max-w-5xl px-6">
+        <div className="backdrop-blur-md bg-white/[0.01] border border-white/5 p-8 md:p-12 rounded-2xl shadow-2xl">
+          
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            <span className="text-blue-500 font-mono tracking-[0.2em] uppercase text-[10px] mb-3 block">
+              // Portfolio 2024
+            </span>
+            
+            <h1 className="text-4xl md:text-7xl font-black text-white leading-none tracking-tighter">
+              MY TECH <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
+                HUB.
+              </span>
+            </h1>
+
+            <p className="mt-4 text-base md:text-lg text-slate-400 font-light max-w-md leading-snug">
+              Turning complex code into elegant digital reality.
+            </p>
+
+            <div className="mt-8 flex items-center gap-5">
+              <motion.a
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                href="https://1drv.ms/..."
+                target="_blank"
+                className="px-7 py-3 bg-blue-600 text-white rounded-lg font-bold uppercase text-[11px] tracking-widest hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/20"
+              >
+                View My CV
+              </motion.a>
+              
+              <div className="h-[1px] w-12 bg-slate-700 hidden sm:block"></div>
+              <span className="text-slate-500 text-[10px] uppercase tracking-widest hidden sm:block">Scroll for more</span>
+            </div>
+          </motion.div>
+        </div>
       </div>
+
+      {/* Subtle bottom border accent */}
+      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
     </section>
   );
 }

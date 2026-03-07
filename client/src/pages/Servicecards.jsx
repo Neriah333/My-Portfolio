@@ -1,72 +1,78 @@
 import React from 'react';
-// Import icons from react-icons (e.g., Lucide or FontAwesome)
-import { Monitor, Server, Smartphone, CreditCard, Database, Brain } from 'lucide-react';
+import { Monitor, Server, CreditCard, Database, Cloud, Code2 } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Services = () => {
   const serviceData = [
     {
-      title: "WEB DEVELOPMENT & MAINTENANCE",
-      desc: "Designing, creating frontend and backend of websites and maintaining already existing web applications.",
-      icon: <Monitor size={30} />,
-      color: "bg-blue-500"
+      title: "Full-Stack Development",
+      desc: "Building seamless, responsive frontend experiences and robust backend architectures that scale.",
+      icon: <Monitor size={24} />,
     },
     {
-      title: "SOFTWARE DEVELOPMENT",
-      desc: "Designing and building large-scale software applications like ecommerce, CRM, ERP.",
-      icon: <Server size={30} />,
-      color: "bg-red-500"
+      title: "Enterprise Solutions",
+      desc: "Designing large-scale systems like CRM, ERP, and E-commerce platforms tailored for business growth.",
+      icon: <Code2 size={24} />,
     },
     {
-      title: "PAYMENT INTEGRATION",
-      desc: "Implementing payment gateways like Mpesa, PayPal & Stripe.",
-      icon: <CreditCard size={30} />,
-      color: "bg-purple-500"
+      title: "Payment Systems",
+      desc: "Secure integration of local and international gateways including M-Pesa, Stripe, and PayPal.",
+      icon: <CreditCard size={24} />,
     },
     {
-      title: "DATABASE MANAGEMENT",
-      desc: "Database development and management using MySQL and MongoDB.",
-      icon: <Database size={30} />,
-      color: "bg-teal-500"
+      title: "Database Architecture",
+      desc: "Optimizing data flow and storage using high-performance MySQL, PostgreSQL and MongoDB environments.",
+      icon: <Database size={24} />,
     },
     { 
-      title: "CLOUD SERVICES",
-      desc: "Deploying and managing cloud infrastructure using AWS.",
-      icon: <Server size={30} />,
-      color: "bg-orange-500"
+      title: "Cloud Infrastructure",
+      desc: "Leveraging AWS to deploy scalable, secure, and highly-available cloud-native applications.",
+      icon: <Cloud size={24} />,
+    },
+    { 
+      title: "API Design & DevOps",
+      desc: "Crafting clean RESTful APIs and automating deployment pipelines for rapid delivery.",
+      icon: <Server size={24} />,
     }
-    
   ];
 
   return (
-    <section className="py-10 px-6 bg-gray-50 mb-20">
-      <h2 className="text-3xl font-bold font-serif text-left mb-12 py-10 text-gray-800">
-        What I can do
-      </h2>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10">
-        {serviceData.map((item, index) => (
-          <div key={index} className="relative bg-white p-8 pt-16 shadow-lg text-center flex flex-col items-center group transition-transform hover:-translate-y-2">
+    <section id="services" className="py-24 px-8 bg-slate-950">
+      <div className="max-w-6xl mx-auto">
+        {/* Section Header */}
+        <div className="mb-16">
+          
+          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter">
+            WHAT I CAN <span className="text-slate-500">DO.</span>
+          </h2>
+        </div>
 
-            
-            
-            {/* Hexagon Icon Header */}
-            <div className={`absolute -top-12 w-24 h-24 flex items-center justify-center text-white ${item.color} shadow-xl`} 
-                 style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}>
-              {item.icon}
-            </div>
+        {/* Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {serviceData.map((item, index) => (
+            <motion.div 
+              key={index}
+              whileHover={{ y: -5 }}
+              className="group relative p-8 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-blue-500/50 transition-all duration-300"
+            >
+              {/* Icon Container */}
+              <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
+                {item.icon}
+              </div>
 
-            {/* Content */}
-            <h3 className="text-sm font-bold tracking-widest mb-6 uppercase text-slate-800 leading-snug">
-              {item.title}
-            </h3>
-            <div className="w-12 h-[1px] bg-gray-200 mb-6"></div>
-            <p className="text-gray-500 font-serif text-sm font-light leading-relaxed">
-              {item.desc}
-            </p>
-            
-            {/* Colored Bottom Border Hook */}
-            <div className={`absolute bottom-0 left-0 w-full h-1 ${item.color} opacity-0 group-hover:opacity-100 transition-opacity`}></div>
-          </div>
-        ))}
+              {/* Text Content */}
+              <h3 className="text-white font-bold text-lg mb-3 tracking-tight">
+                {item.title}
+              </h3>
+              <p className="text-slate-400 text-sm leading-relaxed font-light">
+                {item.desc}
+              </p>
+
+              {/* Subtle Decorative Gradient */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

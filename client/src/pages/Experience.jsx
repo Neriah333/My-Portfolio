@@ -1,113 +1,127 @@
-import React from 'react';
-import { Briefcase, Calendar, CheckCircle2 } from 'lucide-react'; // Using lucide-react for icons
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight, Zap, Terminal } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Experience = () => {
-  const experiences = [
+  const allItems = [
     {
+      type: "Experience",
+      title: "Frontend Developer",
       company: "Aquila Cyber",
-      role: "Frontend Developer",
-      period: "Jan 2025 - Present",
-      description: "Leading the frontend development of security-focused web applications, ensuring high performance and a seamless user experience.",
+      period: "2025 — PRESENT",
+      description: "Architecting security-centric interfaces and real-time monitoring systems.",
       tasks: [
-        "Developing responsive dashboards using React.js and Tailwind CSS for real-time threat monitoring.",
-        "Collaborating with backend engineers to integrate RESTful APIs and WebSocket connections for live data streaming.",
-        "Optimizing application performance, reducing initial load times by 40% through code-splitting and lazy loading.",
-        "Translating UI/UX designs on figma into high-quality code.",
+        "Optimized React component render cycles for real-time data",
+        "Implemented secure state management with Context API/Redux",
+        "Developed reusable UI component library with Tailwind"
       ],
-      results: [
-        "Successfully launched a centralize analytics portal used by 50+ enterprise clients.",
-        "Improved user engagement by 25% through the implementation of a more intuitive navigation system.",
-        "Reduced frontend bug reports by 30% by introducing comprehensive unit testing with Vitest/Jest."
-      ]
+      tools: ['React', 'TypeScript', 'Tailwind', 'Redux'],
+      media: ["/demo.mp4", "/demo1.mp4"]
+    },
+    {
+      type: "Project",
+      title: "Bookstore App",
+      company: "Personal Project",
+      period: "Jun 2025 — Sep 2025",
+      description: "A cross-platform mobile app for browsing and purchasing books.",
+      tasks: ["Full-Stack Architecture", "Mobile App Development"],
+      tools: ['React Native', 'Firebase', 'Node.js'],
+      media: ["/bookstore1.mp4", "/bookstore2.mp4"]
     }
   ];
 
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [mediaIndex, setMediaIndex] = useState(0);
+
+  // Reset media index whenever the main carousel item changes
+  useEffect(() => {
+    setMediaIndex(0);
+  }, [activeIndex]);
+
+  const currentItem = allItems[activeIndex];
+
+  const nextItem = () => setActiveIndex((prev) => (prev + 1) % allItems.length);
+  const prevItem = () => setActiveIndex((prev) => (prev - 1 + allItems.length) % allItems.length);
+
   return (
-    <section className="mt-8 py-20 px-6 bg-gray-50 text-gray-300 font-sans" id="experience">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 flex items-center gap-4">
-          
-          Work Experience
-        </h2>
+    <section id="work" className="py-24 px-6 bg-slate-950 text-slate-300">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex justify-between items-end mb-16">
+          <h2 className="text-3xl font-black text-white uppercase tracking-widest">Work_Log</h2>
+          <div className="flex gap-4">
+            <button onClick={prevItem} className="p-3 bg-white/5 hover:bg-blue-600 rounded-full transition"><ChevronLeft /></button>
+            <button onClick={nextItem} className="p-3 bg-white/5 hover:bg-blue-600 rounded-full transition"><ChevronRight /></button>
+          </div>
+        </div>
 
-        <div className="space-y-12">
-          {experiences.map((exp, index) => (
-            <div key={index} className="relative pl-8 border-l-2 border-blue-400/30">
-              {/* Timeline Dot */}
-              <div className="absolute w-4 h-4 bg-blue-400 rounded-full -left-[9px] top-1 shadow-[0_0_10px_#60a5fa]"></div>
+        <AnimatePresence mode="wait">
+          <motion.div 
+            key={activeIndex}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            className="grid lg:grid-cols-12 gap-8 items-start"
+          >
+            <div className="lg:col-span-4 space-y-4">
+              <h3 className="text-3xl font-black text-blue-500">{currentItem.title}</h3>
+              <p className='border border-blue-500 rounded-full p-1 text-xs text-center'>{currentItem.company} | <span>{currentItem.period}</span></p>
               
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-slate-900 leading-tight">{exp.role}</h3>
-                  <p className="text-blue-400 font-semibold text-lg">{exp.company}</p>
+              <p className="text-slate-400">{currentItem.description}</p>
+              <ul className="space-y-2">
+                {currentItem.tasks.map((task, i) => (
+                  <li key={i} className="flex gap-2 text-sm"><Zap size={14} className="text-blue-500 mt-1" /> {task}</li>
+                ))}
+              </ul>
+
+              <div className="pt-4 border-t border-white/5">
+                <p className="text-xs font-mono text-slate-500 uppercase tracking-widest mb-3">Stack</p>
+                <div className="flex flex-wrap gap-2">
+                  {currentItem.tools.map((tool, i) => (
+                    <span key={i} className="px-3 py-1 bg-white/[0.03] border border-white/10 rounded text-[11px] font-mono text-slate-300 uppercase hover:border-blue-500/50 transition-colors">
+                      {tool}
+                    </span>
+                  ))}
                 </div>
-                <div className="flex items-center gap-2 text-sm text-slate-400 mt-2 md:mt-0 bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
-                  <Calendar size={14} />
-                  {exp.period}
-                </div>
-              </div>
-
-              <p className="mb-6 text-slate-900 italic">
-                {exp.description}
-              </p>
-
-              <div className="grid md:grid-cols-2 gap-8">
-                {/* Tasks */}
-                <div>
-                  <h4 className="text-slate-900 font-semibold mb-4 flex items-center gap-2">
-                    Key Responsibilities
-                  </h4>
-                  <ul className="space-y-3">
-                    {exp.tasks.map((task, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm text-slate-800 leading-relaxed">
-                        <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-blue-400 shrink-0"></span>
-                        {task}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Results / Achievement Card */}
-                {/* <div className="bg-slate-800 p-6 rounded-xl border border-blue-400/20 animate-float shadow-[0_20px_40px_-15px_rgba(96,165,250,0.3)]">
-                  <h4 className="text-blue-400 font-semibold mb-4 flex items-center gap-2">
-                    <CheckCircle2 size={18} />
-                    Achievement
-                  </h4>
-                  <ul className="space-y-3">
-                    {exp.results.map((result, i) => (
-                      <li key={i} className="text-sm font-medium text-gray-200">
-                        • {result}
-                      </li>
-                    ))}
-                  </ul>
-                </div> */}
-
-                <div className="md:col-span-2 mt-6">
-                {/* Heading + Status */}
-                <div className="flex items-center gap-85 mb-3">
-                  <h3 className="text-xl font-semibold text-blue-400">
-                    Demo
-                  </h3> <br />
-
-                  <span className="text-xs px-4 py-2 rounded-full bg-slate-900 text-slate-400 ">
-                    In Progress
-                  </span>
-                </div>
-
-                {/* Video */}
-                <video
-                  className="w-full rounded-xl border border-slate-700 shadow-lg"
-                  controls
-                >
-                  <source src="/demo.mp4" type="video/mp4" />
-                </video>
-              </div>
-
-
               </div>
             </div>
-          ))}
-        </div>
+
+            <div className="lg:col-span-8 relative group">
+              <div className="bg-black rounded-xl border border-white/10 overflow-hidden aspect-video relative flex items-center">
+                <AnimatePresence mode="wait">
+                  <motion.video 
+                    key={`${activeIndex}-${mediaIndex}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    src={currentItem.media[mediaIndex]} 
+                    className="w-full h-full object-cover" 
+                    controls 
+                  />
+                </AnimatePresence>
+
+                {currentItem.media.length > 1 && (
+                  <>
+                    <button 
+                      onClick={(e) => { e.stopPropagation(); setMediaIndex((p) => (p - 1 + currentItem.media.length) % currentItem.media.length); }}
+                      className="absolute left-2 p-2 bg-black/60 backdrop-blur rounded-full hover:bg-blue-600 transition"
+                    >
+                      <ChevronLeft size={16} />
+                    </button>
+                    <button 
+                      onClick={(e) => { e.stopPropagation(); setMediaIndex((p) => (p + 1) % currentItem.media.length); }}
+                      className="absolute right-2 p-2 bg-black/60 backdrop-blur rounded-full hover:bg-blue-600 transition"
+                    >
+                      <ChevronRight size={16} />
+                    </button>
+                  </>
+                )}
+              </div>
+              <div className="mt-3 text-center text-[10px] font-mono text-slate-600 tracking-widest uppercase">
+                Media {mediaIndex + 1} / {currentItem.media.length}
+              </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );

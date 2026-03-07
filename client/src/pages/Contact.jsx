@@ -7,12 +7,7 @@ import emailjs from "emailjs-com";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function Contact() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -20,108 +15,85 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    emailjs.send(
-      "service_y2e7zug",      
-      "template_2880juo",     
-      form,                   
-      "Z9uuL0iaNGsGDjWz8"       
-    )
+    emailjs.send("service_y2e7zug", "template_2880juo", form, "Z9uuL0iaNGsGDjWz8")
     .then(() => {
       alert("Message sent successfully!");
-      setForm({ name: "", email: "", subject: "", message: "" });
+      setForm({ name: "", email: "", message: "" });
     })
     .catch((error) => {
       console.error("EmailJS error:", error);
-      alert("Failed to send message. Please try again.");
+      alert("Failed to send message.");
     });
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 p-6 mt-15">
-      
-      {/* LEFT SIDE - CONTACT INFO */}
-      <div className="flex-1 space-y-4">
-        <h2 className="text-2xl font-bold text-slate-800 dark:text-white">
-          Get in Touch
-        </h2>
-        <p className="text-gray-600 dark:text-gray-300">
-          Feel free to reach out through the form or via my contact details below.
-        </p>
-        <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-          <FaPhoneAlt className="text-blue-400" />
-          <span>+254 794 040 980</span>
+    <section id="contact" className="py-24 px-8 bg-slate-950 text-white">
+      <div className="flex flex-col md:flex-row gap-16 max-w-5xl mx-auto">
+        
+        {/* LEFT SIDE - CONTACT INFO */}
+        <div className="flex-1 space-y-8">
+          <h2 className="text-4xl font-black tracking-tighter">
+            GET IN <span className="text-slate-500">TOUCH.</span>
+          </h2>
+          <p className="text-slate-400 text-lg">
+            Have a project in mind or want to collaborate? My inbox is always open.
+          </p>
+          <div className="space-y-6">
+            {[
+              { icon: FaPhoneAlt, text: "+254 794 040 980" },
+              { icon: FaEnvelope, text: "pheobenyawanda@gmail.com" },
+              { icon: FaMapMarkerAlt, text: "Nairobi, Kenya" }
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-4 text-slate-300">
+                <div className="p-3 rounded-lg bg-blue-500/10 text-blue-500">
+                  <item.icon />
+                </div>
+                <span className="font-mono">{item.text}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-          <FaEnvelope className="text-blue-400" />
-          <span>pheobenyawanda@gmail.com</span>
-        </div>
-        <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-          <FaMapMarkerAlt className="text-blue-400" />
-          <span>Nairobi, Kenya</span>
+
+        {/* RIGHT SIDE - CONTACT FORM */}
+        <div className="flex-1">
+          <Card className="bg-white/[0.02] border border-white/5 p-2">
+            <form onSubmit={handleSubmit}>
+              <CardContent className="space-y-4 pt-6">
+                {['name', 'email'].map((field) => (
+                  <div key={field}>
+                    <label className="block text-xs font-mono uppercase text-slate-500 mb-2">{field}</label>
+                    <Input
+                      name={field}
+                      value={form[field]}
+                      onChange={handleChange}
+                      className="bg-slate-900 border-white/10 text-white placeholder:text-slate-600 focus:border-blue-500"
+                      required
+                    />
+                  </div>
+                ))}
+                <div>
+                  <label className="block text-xs font-mono uppercase text-slate-500 mb-2">message</label>
+                  <Textarea
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    className="bg-slate-900 border-white/10 text-white placeholder:text-slate-600 focus:border-blue-500 h-32"
+                    required
+                  />
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button 
+                  type="submit" 
+                  className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold tracking-widest uppercase py-6 mt-5"
+                >
+                  Send Message
+                </Button>
+              </CardFooter>
+            </form>
+          </Card>
         </div>
       </div>
-
-      {/* RIGHT SIDE - CONTACT FORM */}
-      <div className="flex-1">
-        <Card>
-          <form onSubmit={handleSubmit}>
-            <CardContent className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-slate-700">Name</label>
-                <Input
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-700">Email</label>
-                <Input
-                  name="email"
-                  type="email"
-                  value={form.email}
-                  onChange={handleChange}
-                  placeholder="you@example.com"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-700">Subject</label>
-                <Input
-                  name="subject"
-                  value={form.subject}
-                  onChange={handleChange}
-                  placeholder="Your Subject"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Message</label>
-                <Textarea
-                  className="h-20"
-                  name="message"
-                  rows={4}
-                  value={form.message}
-                  onChange={handleChange}
-                  placeholder="Write a message..."
-                  required
-                />
-              </div>
-            </CardContent>
-
-            <CardFooter>
-              <Button type="submit" className="w-full bg-slate-900 mt-5 text-white hover:bg-blue-400">Send</Button>
-            </CardFooter>
-          </form>
-        </Card>
-      </div>
-
-    </div>
+    </section>
   );
 }
