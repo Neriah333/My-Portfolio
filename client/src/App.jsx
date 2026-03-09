@@ -11,11 +11,11 @@ import Experience from "./pages/Experience";
 export default function App() {
   return (
     <div className="flex">
-      {/* Sidebar fixed */}
+      
       
 
       {/* Scrollable main content */}
-      <main className="ml-10 flex-1 p-8">
+      <main className="ml-0 p-0 md:ml-5 md:p-5 flex-1">
 
         <Navbar/>
         
