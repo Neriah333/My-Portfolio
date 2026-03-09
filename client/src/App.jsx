@@ -15,7 +15,7 @@ export default function App() {
       
 
       {/* Scrollable main content */}
-      <main className="ml-0 p-0 md:ml-5 md:p-5 flex-1">
+      <main className="ml-0 p-0 md:ml-3 md:p-3 flex-1">
 
         <Navbar/>
         
