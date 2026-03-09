@@ -3,7 +3,7 @@ import { Button } from '../components/ui/button'
 import { Input } from '../components/ui/input'
 import { Textarea } from '../components/ui/textarea'
 import { useState } from "react";
-import emailjs from "emailjs-com";
+import axios from "axios";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function Contact() {
@@ -13,17 +13,19 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
     e.preventDefault();
-    emailjs.send("service_y2e7zug", "template_2880juo", form, "Z9uuL0iaNGsGDjWz8")
-    .then(() => {
+
+    try {
+      await axios.post("http://localhost:5000/api/contact", form);
+
       alert("Message sent successfully!");
       setForm({ name: "", email: "", message: "" });
-    })
-    .catch((error) => {
-      console.error("EmailJS error:", error);
+
+    } catch (error) {
+      console.error(error);
       alert("Failed to send message.");
-    });
+    }
   };
 
   return (
