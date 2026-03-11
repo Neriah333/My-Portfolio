@@ -9,7 +9,7 @@ const Experience = () => {
       title: "Frontend Developer",
       company: "Aquila Cyber",
       period: "2025 — PRESENT",
-      description: "Architecting security-centric interfaces and real-time monitoring systems.",
+      description: "Architecting cybersecurity community platforms and implementing real-time monitoring systems for threat awareness, learning and collaboration.",
       tasks: [
         "Optimized React component render cycles",
         "Secure state management with Context API/Redux",
@@ -141,11 +141,6 @@ const Experience = () => {
                   {currentItem.links.github && (
                     <a href={currentItem.links.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[10px] font-mono text-blue-400 hover:text-white transition tracking-widest">
                       <Github size={14} /> GITHUB_REPO
-                    </a>
-                  )}
-                  {currentItem.links.docs && (
-                    <a href={currentItem.links.docs} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[10px] font-mono text-blue-400 hover:text-white transition tracking-widest">
-                      <ExternalLink size={14} /> LIVE_DOCS
                     </a>
                   )}
                 </div>
