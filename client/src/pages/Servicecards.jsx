@@ -41,7 +41,6 @@ const Services = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-16">
-          
           <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter">
             WHAT I CAN <span className="text-slate-500">DO.</span>
           </h2>
@@ -53,10 +52,12 @@ const Services = () => {
             <motion.div 
               key={index}
               whileHover={{ y: -5 }}
-              className="group relative p-8 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-blue-500/50 transition-all duration-300"
+              className="group relative p-8 rounded-2xl bg-white/[0.02] border border-white/5 
+                         hover:bg-blue-500 transition-all duration-300"
             >
-              {/* Icon Container */}
-              <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
+              {/* Icon Container - Icon background becomes more solid or changes on hover */}
+              <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6 
+                            group-hover:bg-white group-hover:text-blue-500 transition-colors duration-300">
                 {item.icon}
               </div>
 
@@ -64,7 +65,7 @@ const Services = () => {
               <h3 className="text-white font-bold text-lg mb-3 tracking-tight">
                 {item.title}
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed font-light">
+              <p className="text-slate-400 group-hover:text-white text-sm leading-relaxed font-light transition-colors duration-300">
                 {item.desc}
               </p>
 

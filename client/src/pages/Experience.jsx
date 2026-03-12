@@ -15,7 +15,8 @@ const Experience = () => {
         "Secure state management with Context API/Redux",
         "Developed reusable UI component library"
       ],
-      tools: ['React', 'TypeScript', 'Tailwind', 'Redux'],
+      tools: ['Nextjs', 'TypeScript', 'Tailwind', 'Redux'],
+      links: [],
       media: ["/demo.mp4", "/demo1.mp4"]
     },
     {
@@ -23,7 +24,7 @@ const Experience = () => {
       title: "BackEnd Developer",
       company: "VGBM Tech Innovations",
       period: "Feb 2026 — Present",
-      description: "Developing scalable backend infrastructure for logistics and moving services.",
+      description: "Developing scalable backend infrastructure for logistics and moving services that links users to service providers such as dispatch riders, truck drivers, and towing operators on demand.",
       tasks: [
         "Implemented secure User Authentication and RBAC",
         "Designed optimized MySQL database schemas",
@@ -34,7 +35,7 @@ const Experience = () => {
         github: "https://github.com/Neriah333/MoversPadi_",
         docs: "https://api-docs.example.com"
       },
-      media: ["/bookstore1.mp4", "/bookstore2.mp4"]
+      media: ["/demo2.mp4"]
     }
   ];
 
