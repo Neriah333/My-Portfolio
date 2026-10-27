@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "../components/ThemeToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,8 @@ export default function Navbar() {
             </a>
           ))}
         </div>
+
+         <ThemeToggle />
 
         {/* Contact Button */}
         <a 
