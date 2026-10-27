@@ -18,7 +18,7 @@ export default function Home() {
       </div>
 
       {/* Main Content Card - Scaled down padding */}
-      <div className="relative z-10 w-full max-w-5xl px-6">
+      <div className="relative z-10 w-full max-w-5xl px-4">
         <div className="backdrop-blur-md bg-white/[0.01] border border-white/5 p-8 md:p-12 rounded-2xl shadow-2xl">
           
           <motion.div

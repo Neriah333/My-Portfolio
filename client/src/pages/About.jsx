@@ -7,11 +7,11 @@ export default function About() {
   
 
   return (
-    <section id="about" className="relative min-h-[70vh] flex items-center bg-slate-950 px-8 py-32 overflow-hidden">
+    <section id="about" className="relative min-h-[70vh] flex items-center bg-slate-950 px-4 md:px-6 py-32 overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-200 h-96 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+      <div className="max-w-[1700px] mx-auto grid lg:grid-cols-2 gap-8 items-center relative z-10">
         
         {/* LEFT COLUMN: TILTED IMAGE WITH GEOMETRIC FRAMES */}
         <div className="relative flex justify-center items-center">
@@ -50,13 +50,13 @@ export default function About() {
           </h3>
           <p className="text-slate-400 text-lg leading-relaxed mb-6">
             Hello, I’m <span className="text-white font-bold underline decoration-blue-500 underline-offset-8">Pheobe Nyawanda</span>. 
-            As a Full Stack Developer and AWS Cloud Practitioner, I specialize in architecting systems that are as 
+            As a Software Developer and AWS Cloud Practitioner, I specialize in architecting systems that are as 
             robust on the backend as they are seamless on the front.
           </p>
 
           <div className="grid grid-cols-2 gap-4 mt-8">
              <div className="p-4 border-l border-white/10">
-               <div className="text-2xl font-bold text-white">1+ Years</div>
+               <div className="text-2xl font-bold text-white">2+ Years</div>
                <div className="text-slate-500 text-sm font-mono uppercase">Experience</div>
              </div>
              <div className="p-4 border-l border-white/10">
@@ -68,7 +68,7 @@ export default function About() {
           {/* Action Buttons & Socials */}
           <div className="flex items-center gap-6 mt-10">
             <a 
-              href="https://1drv.ms/b/c/a157ce8fb268e1aa/IQDzNFJnXeuaSa070X8kX1b4AckXlZs02m5UkEXWwdV5BAo?e=WR8oKd" 
+              href="https://1drv.ms/w/c/a157ce8fb268e1aa/IQDyN8xINBJHSKtnatNxUsHEASv-ib8rcxVJ5mrijMd10Gw?e=BSvcyD" 
               target="_blank" 
               className="px-8 py-3 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)]"
             >
