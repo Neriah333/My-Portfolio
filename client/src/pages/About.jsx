@@ -7,7 +7,7 @@ export default function About() {
   
 
   return (
-    <section id="about" className="relative min-h-[70vh] flex items-center bg-slate-950 px-4 md:px-6 py-32 overflow-hidden">
+    <section id="about" className="relative min-h-[70vh] flex items-center bg-background px-4 md:px-6 py-32 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-200 h-96 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
 
@@ -28,7 +28,7 @@ export default function About() {
 
           <motion.div 
             animate={{ rotate: -10 }} 
-            className="w-80 h-80 bg-slate-900 border-4 border-slate-800 shadow-2xl relative overflow-hidden rounded-[30px]"
+            className="w-80 h-80 bg-card border-4 border-border shadow-2xl relative overflow-hidden rounded-[30px]"
           >
             <img 
               src={myImage} 
@@ -45,23 +45,23 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter leading-none">
+          <h3 className="text-4xl md:text-5xl font-black text-foreground mb-6 tracking-tighter leading-none">
             PROFILE
           </h3>
-          <p className="text-slate-400 text-lg leading-relaxed mb-6">
-            Hello, I’m <span className="text-white font-bold underline decoration-blue-500 underline-offset-8">Pheobe Nyawanda</span>. 
+          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+            Hello, I’m <span className="text-foreground font-bold underline decoration-blue-500 underline-offset-8">Pheobe Nyawanda</span>. 
             As a Software Developer and AWS Cloud Practitioner, I specialize in architecting systems that are as 
             robust on the backend as they are seamless on the front.
           </p>
 
           <div className="grid grid-cols-2 gap-4 mt-8">
-             <div className="p-4 border-l border-white/10">
-               <div className="text-2xl font-bold text-white">2+ Years</div>
-               <div className="text-slate-500 text-sm font-mono uppercase">Experience</div>
+             <div className="p-4 border-l border-border">
+               <div className="text-2xl font-bold text-foreground">2+ Years</div>
+               <div className="text-muted-foreground text-sm font-mono uppercase">Experience</div>
              </div>
-             <div className="p-4 border-l border-white/10">
-               <div className="text-2xl font-bold text-white">AWS Certified</div>
-               <div className="text-slate-500 text-sm font-mono uppercase">Cloud Practitioner</div>
+             <div className="p-4 border-l border-border">
+               <div className="text-2xl font-bold text-foreground">AWS Certified</div>
+               <div className="text-muted-foreground text-sm font-mono uppercase">Cloud Practitioner</div>
              </div>
           </div>
 
@@ -70,12 +70,12 @@ export default function About() {
             <a 
               href="https://1drv.ms/w/c/a157ce8fb268e1aa/IQDyN8xINBJHSKtnatNxUsHEASv-ib8rcxVJ5mrijMd10Gw?e=BSvcyD" 
               target="_blank" 
-              className="px-8 py-3 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)]"
+              className="px-8 py-3 bg-blue-600 text-foreground font-bold rounded-full hover:bg-blue-700 transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)]"
             >
               VIEW CV
             </a>
 
-            <div className="flex gap-4 text-slate-500">
+            <div className="flex gap-4 text-muted-foreground">
               <a href="https://github.com/Neriah333" target="_blank" rel="noreferrer" className="hover:text-blue-500 transition">
                 <Github size={24} />
               </a>

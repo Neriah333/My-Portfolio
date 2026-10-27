@@ -52,16 +52,16 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-8 bg-slate-950 text-white">
+    <section id="contact" className="py-24 px-8 bg-background text-foreground">
       <div className="flex flex-col md:flex-row gap-16 max-w-5xl mx-auto">
 
         {/* LEFT SIDE */}
         <div className="flex-1 space-y-8">
           <h2 className="text-4xl font-black tracking-tighter">
-            GET IN <span className="text-slate-500">TOUCH.</span>
+            GET IN <span className="text-muted-foreground">TOUCH.</span>
           </h2>
 
-          <p className="text-slate-400 text-lg">
+          <p className="text-muted-foreground text-lg">
             Have a project in mind or want to collaborate? My inbox is always open.
           </p>
 
@@ -71,7 +71,7 @@ export default function Contact() {
               { icon: FaEnvelope, text: "pheobenyawanda@gmail.com" },
               { icon: FaMapMarkerAlt, text: "Nairobi, Kenya" }
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-4 text-slate-300">
+              <div key={i} className="flex items-center gap-4 text-muted-foreground">
                 <div className="p-3 rounded-lg bg-blue-500/10 text-blue-500">
                   <item.icon />
                 </div>
@@ -83,7 +83,7 @@ export default function Contact() {
 
         {/* RIGHT SIDE */}
         <div className="flex-1">
-          <Card className="bg-white/[0.02] border border-white/5 p-2">
+          <Card className="bg-muted border border-border p-2">
             <form onSubmit={handleSubmit}>
               {status && (
                 <p className="text-green-400 text-sm text-center mt-2">
@@ -94,7 +94,7 @@ export default function Contact() {
 
                 {['name','email','subject'].map((field) => (
                   <div key={field}>
-                    <label className="block text-xs font-mono uppercase text-slate-500 mb-2">
+                    <label className="block text-xs font-mono uppercase text-muted-foreground mb-2">
                       {field}
                     </label>
 
@@ -102,14 +102,14 @@ export default function Contact() {
                       name={field}
                       value={form[field]}
                       onChange={handleChange}
-                      className="bg-slate-900 border-white/10 text-white"
+                      className="bg-card border-border text-foreground"
                       required
                     />
                   </div>
                 ))}
 
                 <div>
-                  <label className="block text-xs font-mono uppercase text-slate-500 mb-2">
+                  <label className="block text-xs font-mono uppercase text-muted-foreground mb-2">
                     message
                   </label>
 
@@ -117,7 +117,7 @@ export default function Contact() {
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    className="bg-slate-900 border-white/10 text-white h-32"
+                    className="bg-card border-border text-foreground h-32"
                     required
                   />
                 </div>
@@ -127,7 +127,7 @@ export default function Contact() {
               <CardFooter>
                 <Button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold tracking-widest uppercase py-6 mt-5"
+                  className="w-full bg-blue-600 hover:bg-blue-500 text-foreground font-bold tracking-widest uppercase py-6 mt-5"
                 >
                   Send Message
                 </Button>

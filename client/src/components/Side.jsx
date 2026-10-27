@@ -64,7 +64,7 @@ export default function Layout() {
                 Pheobe Nyawanda
               </SidebarGroupLabel>
               <br />
-              <SidebarGroupLabel className="text-xl text-slate-600 font-serif text-center">
+              <SidebarGroupLabel className="text-xl text-muted-foreground font-serif text-center">
                 Fullstack Developer
               </SidebarGroupLabel>
               <br />
@@ -75,7 +75,7 @@ export default function Layout() {
                       asChild
                       className={
                         activeSection.toLowerCase() === item.name.toLowerCase()
-                          ? "bg-slate-900 text-white "
+                          ? "bg-card text-foreground "
                           : "hover:bg-slate-300"
                       }
                     >
@@ -117,7 +117,7 @@ export default function Layout() {
               href="https://twitter.com/phybeeeee"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-600 text-2xl"
+              className="text-blue-600 dark:text-blue-400 hover:text-blue-600 text-2xl"
             >
               <FaTwitter />
             </a>

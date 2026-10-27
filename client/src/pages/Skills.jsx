@@ -26,10 +26,10 @@ const itemVariants = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-6 px-2 bg-slate-950">
+    <section id="skills" className="py-6 px-2 bg-background">
       <div className="max-w-5xl mx-auto">
         <div className="mb-5">
-          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter">EXPERTISE</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-foreground tracking-tighter">EXPERTISE</h2>
         </div>
 
         <div className="grid md:grid-cols-1 gap-10">
@@ -40,7 +40,7 @@ export default function Skills() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={containerVariants}
-              className="relative p-4 rounded-2xl bg-white/[0.05] border border-white/5"
+              className="relative p-4 rounded-2xl bg-muted border border-border"
             >
               <h3 className="text-blue-500 font-mono text-xs uppercase tracking-[0.2em] mb-6">{group.category}</h3>
               <div className="flex flex-wrap gap-4">
@@ -49,7 +49,7 @@ export default function Skills() {
                     key={i}
                     variants={itemVariants}
                     whileHover={{ scale: 1.05 }}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-900 border border-white/5 text-slate-300 hover:text-white hover:border-blue-500/30 transition-all cursor-default"
+                    className="flex items-center gap-3 px-4 py-3 rounded-xl bg-card border border-border text-muted-foreground hover:text-foreground hover:border-blue-500/30 transition-all cursor-default"
                   >
                     <span className="text-lg">{skill.icon}</span>
                     <span className="text-sm font-medium tracking-tight">{skill.name}</span>

@@ -11,7 +11,7 @@ export default function Navbar() {
       <motion.div 
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className="bg-slate-950/80 backdrop-blur-md border border-white/10 px-6 py-3 rounded-full flex items-center gap-6 shadow-2xl pointer-events-auto"
+        className="bg-background/80 backdrop-blur-md border border-border px-6 py-3 rounded-full flex items-center gap-6 shadow-2xl pointer-events-auto"
       >
         {/* Desktop Links */}
         <div className="hidden md:flex gap-8">
@@ -19,7 +19,7 @@ export default function Navbar() {
             <a 
               key={link} 
               href={`#${link.toLowerCase()}`}
-              className="text-slate-400 hover:text-white font-mono text-xs uppercase tracking-widest transition"
+              className="text-muted-foreground hover:text-foreground font-mono text-xs uppercase tracking-widest transition"
             >
               {link}
             </a>
@@ -29,14 +29,14 @@ export default function Navbar() {
         {/* Contact Button */}
         <a 
           href="#contact" 
-          className="px-5 py-2 bg-blue-600 text-white text-xs font-bold rounded-full hover:bg-blue-700 transition"
+          className="px-5 py-2 bg-blue-600 text-foreground text-xs font-bold rounded-full hover:bg-blue-700 transition"
         >
           CONTACT
         </a>
 
         {/* Mobile Toggle (Right Side) */}
         <button 
-          className="md:hidden text-slate-400 hover:text-white"
+          className="md:hidden text-muted-foreground hover:text-foreground"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -62,14 +62,14 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-24 right-4 w-48 bg-slate-900 border border-white/10 rounded-2xl p-6 flex flex-col gap-4 items-end shadow-2xl z-50 md:hidden"
+              className="fixed top-24 right-4 w-48 bg-card border border-border rounded-2xl p-6 flex flex-col gap-4 items-end shadow-2xl z-50 md:hidden"
             >
               {links.map((link) => (
                 <a 
                   key={link} 
                   href={`#${link.toLowerCase()}`}
                   onClick={() => setIsOpen(false)}
-                  className="text-slate-300 hover:text-blue-500 font-mono text-sm uppercase tracking-widest"
+                  className="text-muted-foreground hover:text-blue-500 font-mono text-sm uppercase tracking-widest"
                 >
                   {link}
                 </a>

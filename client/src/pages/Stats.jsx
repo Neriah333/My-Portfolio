@@ -35,9 +35,9 @@ const Stats = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex flex-col items-center text-center p-8 rounded-2xl bg-white/[0.03] backdrop-blur-md border border-white/10 hover:border-blue-500/40 transition-all duration-500 group"
+              className="flex flex-col items-center text-center p-8 rounded-2xl bg-muted backdrop-blur-md border border-border hover:border-blue-500/40 transition-all duration-500 group"
             >
-              <div className="text-white text-5xl md:text-6xl font-black tracking-tighter mb-2">
+              <div className="text-foreground text-5xl md:text-6xl font-black tracking-tighter mb-2">
                 {/* The key={inView} is critical: it forces the component to 
                   re-mount and play the animation when the user scrolls down.
                 */}
@@ -58,7 +58,7 @@ const Stats = () => {
               {/* Animated accent line that grows on hover */}
               <div className="h-[2px] w-8 bg-blue-500 mb-4 group-hover:w-16 transition-all duration-500"></div>
 
-              <p className="text-slate-400 text-[10px] md:text-xs tracking-[0.4em] font-bold uppercase leading-relaxed">
+              <p className="text-muted-foreground text-[10px] md:text-xs tracking-[0.4em] font-bold uppercase leading-relaxed">
                 {stat.label}
               </p>
             </motion.div>

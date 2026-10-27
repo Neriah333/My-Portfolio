@@ -37,12 +37,12 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 px-4 bg-slate-950">
+    <section id="services" className="py-24 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter">
-            WHAT I CAN <span className="text-slate-500">DO.</span>
+          <h2 className="text-4xl md:text-5xl font-black text-foreground tracking-tighter">
+            WHAT I CAN <span className="text-muted-foreground">DO.</span>
           </h2>
         </div>
 
@@ -52,20 +52,20 @@ const Services = () => {
             <motion.div 
               key={index}
               whileHover={{ y: -5 }}
-              className="group relative p-8 rounded-2xl bg-white/[0.02] border border-white/5 
+              className="group relative p-8 rounded-2xl bg-muted border border-border 
                          hover:bg-blue-500 transition-all duration-300"
             >
               {/* Icon Container - Icon background becomes more solid or changes on hover */}
-              <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6 
+              <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-6 
                             group-hover:bg-white group-hover:text-blue-500 transition-colors duration-300">
                 {item.icon}
               </div>
 
               {/* Text Content */}
-              <h3 className="text-white font-bold text-lg mb-3 tracking-tight">
+              <h3 className="text-foreground font-bold text-lg mb-3 tracking-tight">
                 {item.title}
               </h3>
-              <p className="text-slate-400 group-hover:text-white text-sm leading-relaxed font-light transition-colors duration-300">
+              <p className="text-muted-foreground group-hover:text-foreground text-sm leading-relaxed font-light transition-colors duration-300">
                 {item.desc}
               </p>
 
