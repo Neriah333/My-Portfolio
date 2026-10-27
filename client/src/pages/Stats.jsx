@@ -7,9 +7,9 @@ import { motion } from 'framer-motion';
 const Stats = () => {
   const statsData = [
     { number: 150, label: "CUPS OF COFFEE", suffix: "+" },
-    { number: 10, label: "PROJECTS", suffix: "" },
+    { number: 4, label: "PROJECTS", suffix: "" },
     { number: 2, label: "CLIENTS", suffix: "" },
-    { number: 2, label: "PARTNERS", suffix: "" },
+    { number: 4, label: "PARTNERS", suffix: "" },
   ];
 
   // Lowered threshold to 0.2 to ensure it triggers even on smaller screens
