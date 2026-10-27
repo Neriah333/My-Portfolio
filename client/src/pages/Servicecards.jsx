@@ -11,17 +11,17 @@ const Services = () => {
     },
     {
       title: "Enterprise Solutions",
-      desc: "Designing large-scale systems like CRM, ERP, and E-commerce platforms tailored for business growth.",
+      desc: "Designing large-scale systems like E-commerce platforms tailored for business growth.",
       icon: <Code2 size={24} />,
     },
     {
       title: "Payment Systems",
-      desc: "Secure integration of local and international gateways including M-Pesa, Stripe, and PayPal.",
+      desc: "Secure integration of local gateways including M-Pesa.",
       icon: <CreditCard size={24} />,
     },
     {
       title: "Database Architecture",
-      desc: "Optimizing data flow and storage using high-performance MySQL, PostgreSQL and MongoDB environments.",
+      desc: "Optimizing data flow and storage using high-performance MySQL and MongoDB environments.",
       icon: <Database size={24} />,
     },
     { 
@@ -37,7 +37,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 px-8 bg-slate-950">
+    <section id="services" className="py-24 px-4 bg-slate-950">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-16">
