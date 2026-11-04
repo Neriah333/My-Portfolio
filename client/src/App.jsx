@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Stats from "./pages/Stats";
 import Services from "./pages/Servicecards";
 import Experience from "./pages/Experience";
+import Footer from "./pages/footer";
 
 export default function App() {
   return (
@@ -42,6 +43,8 @@ export default function App() {
         <section id="contact">
           <Contact />
         </section>
+
+        <Footer />
       </main>
     </div>
   );

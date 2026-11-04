@@ -1,35 +1,33 @@
 import React from "react";
-import bgImage from "../../images/bg5.jpg";
 import { motion } from "framer-motion";
+import bgImage from "../../images/bgimage1.png";
 
 export default function Home() {
   return (
     <section
       id="home"
-      /* Reduced height: Adjusted from min-h-screen to h-[70vh] or min-h-[600px] */
       className="relative h-[75vh] min-h-[550px] flex items-center justify-center bg-background overflow-hidden"
     >
-      {/* Background Image with darker, tighter overlay */}
-      <div 
+      {/* Background image + theme-aware overlay */}
+      <div
         className="absolute inset-0 z-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
-        <div className="absolute inset-0 bg-background/85 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-background/60" />
       </div>
 
-      {/* Main Content Card - Scaled down padding */}
+      {/* Main content card */}
       <div className="relative z-10 w-full max-w-5xl px-4">
-        <div className="backdrop-blur-md bg-white/[0.01] border border-border p-8 md:p-12 rounded-2xl shadow-2xl">
-          
+        <div className="backdrop-blur-md bg-background/20 border border-border p-8 md:p-12 rounded-2xl shadow-2xl">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
             <span className="text-blue-500 font-mono tracking-[0.2em] uppercase text-[10px] mb-3 block">
-              // Portfolio 2024
+              // Portfolio 2026
             </span>
-            
+
             <h1 className="text-4xl md:text-7xl font-black text-foreground leading-none tracking-tighter">
               MY TECH <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
@@ -45,15 +43,18 @@ export default function Home() {
               <motion.a
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                href="https://1drv.ms/..."
+                href="https://1drv.ms/w/c/a157ce8fb268e1aa/IQDyN8xINBJHSKtnatNxUsHEASv-ib8rcxVJ5mrijMd10Gw?e=BSvcyD"
                 target="_blank"
-                className="px-7 py-3 bg-blue-600 text-foreground rounded-lg font-bold uppercase text-[11px] tracking-widest hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/20"
+                rel="noreferrer"
+                className="px-7 py-3 bg-blue-600 text-white rounded-lg font-bold uppercase text-[11px] tracking-widest hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/20"
               >
                 View My CV
               </motion.a>
-              
-              <div className="h-[1px] w-12 bg-slate-700 hidden sm:block"></div>
-              <span className="text-muted-foreground text-[10px] uppercase tracking-widest hidden sm:block">Scroll for more</span>
+
+              <div className="h-[1px] w-12 bg-border hidden sm:block"></div>
+              <span className="text-muted-foreground text-[10px] uppercase tracking-widest hidden sm:block">
+                Scroll for more
+              </span>
             </div>
           </motion.div>
         </div>
