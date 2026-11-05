@@ -8,7 +8,7 @@ export default function Navbar() {
   const links = ["About", "Skills", "Services", "Work", "Education"];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-4 py-6 flex justify-center pointer-events-none">
+    <nav className="fixed top-0 left-0 w-full z-50 px-4 py-6 flex justify-center pointer-events-auto">
       <motion.div 
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -40,7 +40,10 @@ export default function Navbar() {
         {/* Mobile Toggle (Right Side) */}
         <button 
           className="md:hidden text-muted-foreground hover:text-foreground"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => {
+            console.log("Menu clicked");
+            setIsOpen(!isOpen);
+          }}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

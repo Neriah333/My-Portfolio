@@ -115,7 +115,7 @@ const Footer = () => {
           </p>
 
           <a
-            href="#home"
+            href="#about"
             className="flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors"
           >
             Back to top

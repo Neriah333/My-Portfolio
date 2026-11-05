@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react"; // Ensure these are imported
+import { Github, Linkedin, Mail } from "lucide-react";
 import myImage from "../../images/myImage.png";
 
 export default function About() {
@@ -54,7 +54,7 @@ export default function About() {
             robust on the backend as they are seamless on the front.
           </p>
 
-          <div className="grid grid-cols-2 gap-4 mt-8">
+          <div className="grid grid-cols-2 gap-4 mt-2">
              <div className="p-4 border-l border-border">
                <div className="text-2xl font-bold text-foreground">2+ Years</div>
                <div className="text-muted-foreground text-sm font-mono uppercase">Experience</div>
@@ -66,7 +66,7 @@ export default function About() {
           </div>
 
           {/* Action Buttons & Socials */}
-          <div className="flex items-center gap-6 mt-10">
+          <div className="flex items-center gap-80 mt-10">
             <a 
               href="https://1drv.ms/w/c/a157ce8fb268e1aa/IQDyN8xINBJHSKtnatNxUsHEASv-ib8rcxVJ5mrijMd10Gw?e=BSvcyD" 
               target="_blank" 
