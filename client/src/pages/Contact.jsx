@@ -5,6 +5,7 @@ import { Textarea } from '../components/ui/textarea'
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import Navbar from './Navbar';
 
 export default function Contact() {
 

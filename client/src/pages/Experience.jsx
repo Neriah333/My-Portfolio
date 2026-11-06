@@ -30,8 +30,8 @@ const Experience = () => {
       },
       media: [
         {
-          type: "image",
-          src: "/rocktechnologies-demo.png"
+          type: "video",
+          src: "/demo5.mp4"
         }
       ]
     },
